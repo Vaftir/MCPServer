@@ -2,8 +2,12 @@ import contextlib
 from fastapi import FastAPI, HTTPException
 from echo_server import mcp as echo_mcp
 from calculator_server import mcp as calculator_app
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
+PORT= os.getenv("PORT", 10000)
 
 # Cria um lifespan combinado para orquestra os dois gerenciadores de sessao
 @contextlib.asynccontextmanager
@@ -21,7 +25,7 @@ app.mount("/calculator", calculator_app.streamable_http_app())
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=PORT)
 
 
 # para conectar o mcp deve usar  a seguinte url

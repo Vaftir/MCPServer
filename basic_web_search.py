@@ -6,6 +6,8 @@ from pydantic import BaseModel, Field
 import os
 load_dotenv()
 
+PORT= os.getenv("PORT", 10000)
+
 # Pydantic models for validation
 class SearchResult(BaseModel):
     """Individual search result item"""
@@ -38,7 +40,7 @@ mcp =  FastMCP(
     name="basic_web_search", 
     version="0.1.0",
     host="0.0.0.0",
-    port=8000,
+    port=PORT,
 )
    
 
