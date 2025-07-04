@@ -7,7 +7,7 @@ import os
 
 load_dotenv()
 
-PORT= os.getenv("PORT", 10000)
+PORT = os.getenv("PORT", 10000)
 
 # Cria um lifespan combinado para orquestra os dois gerenciadores de sessao
 @contextlib.asynccontextmanager

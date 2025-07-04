@@ -6,7 +6,6 @@ from pydantic import BaseModel, Field
 import os
 load_dotenv()
 
-PORT= os.getenv("PORT", 10000)
 
 # Pydantic models for validation
 class SearchResult(BaseModel):
@@ -38,10 +37,9 @@ tavily_client = TavilyClient(api_key=TAVILY_API_KEY)
 
 mcp =  FastMCP(
     name="basic_web_search", 
-    version="0.1.0",
-    host="0.0.0.0",
-    port=PORT,
+     stateless_http=True
 )
+
    
 
 
@@ -76,5 +74,3 @@ def web_search(query: str) -> WebSearchOutput:
         return WebSearchOutput(result=[error_result])
     
     
-if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
