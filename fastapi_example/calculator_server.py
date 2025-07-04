@@ -53,19 +53,6 @@ def multiplicacao(a: float, b: float) -> float:
     """
     return a * b
 
-@mcp.tool(description="Realiza a multiplicação de dois números.")
-def multiplicacao(a: float, b: float) -> float:
-    """Realiza a multiplicação de dois números.
-
-    Args:
-        a (float): O primeiro fator.
-        b (float): O segundo fator.
-
-    Returns:
-        float: O resultado da multiplicação.
-    """
-    return a * b
-
 @mcp.tool(description="Realiza a divisão de dois números.")
 def divisao(a: float, b: float) -> float:
     """Realiza a divisão de dois números.
