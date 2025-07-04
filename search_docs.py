@@ -11,7 +11,7 @@ from docling.document_converter import DocumentConverter
 
 load_dotenv()
 
-mcp = FastMCP("documents_from_web", version="0.1.0")
+mcp = FastMCP("documents_from_web", stateless_http=True)
 
 USER_AGENT = "docs-app/1.0.0"
 SERPER_URL = "https://google.serper.dev/search"
@@ -117,5 +117,4 @@ async def get_docs_from_web(query: str, library: str)-> list[dict] | str:
     return docs_list
             
     
-if __name__ == "__main__":
-    mcp.run(transport="stdio")
+

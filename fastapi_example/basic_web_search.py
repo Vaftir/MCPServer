@@ -37,7 +37,7 @@ tavily_client = TavilyClient(api_key=TAVILY_API_KEY)
 
 mcp =  FastMCP(
     name="basic_web_search", 
-     stateless_http=True
+    stateless_http=True
 )
 
    
