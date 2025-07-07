@@ -35,9 +35,8 @@ if __name__ == "__main__":
 
 
 # para conectar o mcp deve usar  a seguinte url
-# inspector:
-#  - http://0.0.0.0:8080/calculator/mcp
-#  - http://0.0.0.0:8080/echo/mcp
 # aplicações:
-#  - http://0.0.0.0:8080/calculator/mcp/
-#  - http://0.0.0.0:8080/echo/mcp/
+#   - http://0.0.0.0:8080/calculator/mcp/
+#   - http://0.0.0.0:8080/echo/mcp/
+#   - http://0.0.0.0:8080/basic_web_search/mcp/
+#   - http://0.0.0.0:8080/search_docs/mcp/

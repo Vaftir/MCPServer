@@ -21,7 +21,7 @@ SERPER_URL = "https://google.serper.dev/search"
 docs_urls = {
    "langchain":"https://python.langchain.com/docs/",
    "llama_index":"https://docs.llamaindex.ai/en/stable/",
-   "mcp":"https://mcp.readthedocs.io/en/latest/",
+   "mcp":"https://modelcontextprotocol.io/",
    "openai":"https://platform.openai.com/docs/",
 }
 
